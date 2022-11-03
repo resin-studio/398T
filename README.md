@@ -1,14 +1,13 @@
-# Team 9 from outer space presents
-> how to prove
+# Team 9 from outer space presents "How to proof"
 
-## presentation 
-### logic review 
+## Presentation 
+### Logic review 
 ### Direct 
 ### Cases 
-### Contrapositive (or maybe Induction) 
+### Contrapositive (or maybe induction) 
 
-## discussion
-### why is proof useful in computer science?
+## Discussion
+### Why is proof useful in computer science?
 
-## signal group
-join: https://signal.group/#CjQKIOogkc6z7ULr-fkSscE8xi1nQAi9T9qmMRykTWl4sn3rEhAh0m62CMnYtKCor8BjvPUe
+## Signal group
+https://signal.group/#CjQKIOogkc6z7ULr-fkSscE8xi1nQAi9T9qmMRykTWl4sn3rEhAh0m62CMnYtKCor8BjvPUe
