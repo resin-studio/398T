@@ -1,10 +1,10 @@
 # Team 9 from outer space presents "How to proof"
 
 ## Presentation 
-### Logic review 
-### Direct 
-### Cases 
-### Contrapositive (or maybe induction) 
+### Logic review (Thomas)
+### Direct (Matjaz)
+### Cases (Ian)
+### Contrapositive (Chloe) 
 
 ## Discussion
 ### Why is proof useful in computer science?
