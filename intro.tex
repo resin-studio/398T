@@ -1,7 +1,56 @@
 \begin{frame}
-  \frametitle{Lorem ipsum 1}
+  \frametitle{Implication and Negation}
+  \begin{mathpar}
+    \inferrule
+      {
+        \phi \rightarrow \psi
+        \\
+        \phi
+      } 
+      {
+        \psi
+      } 
+    \textsc{\ \ ImpElim}
+
+    \inferrule
+      {
+        \phi \vdash \psi
+      } 
+      {
+        \phi \rightarrow \psi
+      } 
+    \textsc{\ \ ImpIntro}
+
+    \\\\
+
+    \inferrule
+      {
+        \phi \rightarrow \psi
+        \\
+        \phi \rightarrow \neg \psi
+      } 
+      {
+        \neg \phi
+      } 
+    \textsc{\ \ NegIntro}
+
+    \inferrule
+      {
+        \neg \phi
+      } 
+      {
+        \phi \rightarrow \psi
+      } 
+    \textsc{\ \ NegElim}
+\end{mathpar}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Lorem ipsum 2}
+  \frametitle{Conjunction and Disjunction}
 \end{frame}
+
+
+\begin{frame}
+  \frametitle{Universal and Existential}
+\end{frame}
+
