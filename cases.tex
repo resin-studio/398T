@@ -1,0 +1,86 @@
+\begin{frame}
+  \frametitle{Proof by cases}
+  \begin{itemize}
+  \item A form of direct proof in which
+    \begin{enumerate}
+    \item The hypothesis is decomposed into distinct cases and
+    \item The conclusion is demonstrated separately in each case
+    \end{enumerate}
+    \qquad\\\qquad\\
+  \item Valid case decompositions are \textit{exhaustive}: they
+    articulate all and only the possibilities admitted by the original
+    hypothesis
+    \begin{itemize}
+    \item Very valid: $x\in\mathbb{N}\rightarrow x\text{ is even}\lor x\text{ is odd}$
+    \item Very invalid: $x\in\mathbb{N}\rightarrow x=0\lor x=1\lor x=3$
+    \end{itemize}
+    \qquad\\\qquad\\
+  \item Sometimes called ``proof by exhaustion''
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Proof by cases: Example}
+  \begin{prop}
+    For all integers $n$, $n^2+n$ is even.
+  \end{prop}
+  \begin{proof}
+    By cases on the evenness of $n$.
+
+    If $n$ is even, then $n^2$ is even and hence $n^2 +n$ is even.
+
+    If $n$ is odd, then $n^2$ is odd and hence $n^2 +n$ is even.
+  \end{proof}
+  \qquad\\
+  \refl Think of how you might prove this proposition without
+  resorting to cases
+\end{frame}
+
+\begin{frame}
+  \frametitle{Proof by cases: Inference rules}
+  \begin{mathpar}
+    \inferrule
+        {
+          (\phi_1\lor\cdots\lor\phi_n)\rightarrow \psi
+        }
+        {
+          \phi_1\rightarrow \psi\\
+          \cdots\\
+          \phi_n\rightarrow \psi
+        }
+        \textsc{\ \ CaseIntro}
+
+        \inferrule
+            {
+              \phi_1\rightarrow \psi\\
+              \cdots\\
+              \phi_n\rightarrow \psi
+            }
+            {
+              (\phi_1\lor\cdots\lor\phi_n) \rightarrow \psi
+            }
+            \textsc{\ \ CaseElim}
+  \end{mathpar}
+  In short, $((\phi_1\lor\cdots\lor\phi_n) \rightarrow
+  \psi)\equiv((\phi_1\rightarrow\psi)\land\cdots\land(\phi_n\rightarrow\psi))$.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Proof by cases}
+  \begin{itemize}
+  \item Pros
+    \begin{itemize}
+    \item Conceptually simple
+    \item Well-chosen cases can make proofs easier to write
+    \end{itemize}
+    \qquad\\\qquad\\
+  \item Cons
+    \begin{itemize}
+    \item Too many cases are fun for no one (especially readers)
+    \item Considered inelegant
+    \end{itemize}
+    \qquad\\\qquad\\
+  \end{itemize}
+  \refl Come up with your own proposition and prove it by cases
+\end{frame}
