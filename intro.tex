@@ -1,50 +1,50 @@
 \begin{frame}
   \frametitle{Implication and Negation}
   \begin{mathpar}
-    \inferrule
-      {
-        \phi \rightarrow \psi
-        \\
-        \phi
-      } 
-      {
-        \psi
-      } 
-    \textsc{\ \ ImpElim}
-
 
     \inferrule
       {
-        \phi
+        \varphi
         \\\\
         \vdots
         \\\\
         \psi
       } 
       {
-        \phi \rightarrow \psi
+        \varphi \rightarrow \psi
       } 
     \textsc{\ \ ImpIntro}
+
+    \inferrule
+      {
+        \varphi \rightarrow \psi
+        \\
+        \varphi
+      } 
+      {
+        \psi
+      } 
+    \textsc{\ \ ImpElim}
 
     \\\\
 
     \inferrule
       {
-        \phi \rightarrow \psi
+        \varphi \rightarrow \psi
         \\
-        \phi \rightarrow \neg \psi
+        \varphi \rightarrow \neg \psi
       } 
       {
-        \neg \phi
+        \neg \varphi
       } 
     \textsc{\ \ NegIntro}
 
     \inferrule
       {
-        \neg \phi
+        \neg \varphi
       } 
       {
-        \phi \rightarrow \psi
+        \varphi \rightarrow \psi
       } 
     \textsc{\ \ NegElim}
 \end{mathpar}
@@ -52,10 +52,117 @@
 
 \begin{frame}
   \frametitle{Conjunction and Disjunction}
+  \begin{mathpar}
+
+    \inferrule
+      {
+        \varphi \\ \psi
+      } 
+      {
+        \varphi \wedge \psi
+      } 
+    \textsc{\ \ ConjIntro}
+
+    \inferrule
+      {
+        \varphi \wedge \psi
+      } 
+      {
+        \varphi
+      } 
+
+    \inferrule
+      {
+        \varphi \wedge \psi
+      } 
+      {
+        \psi
+      } 
+    \textsc{\ \ ConjElim}
+
+    \\\\ 
+
+    \inferrule
+      {
+        \varphi 
+      } 
+      {
+        \varphi \vee \psi
+      } 
+
+    \inferrule
+      {
+        \psi 
+      } 
+      {
+        \varphi \vee \psi
+      } 
+    \textsc{\ \ DisjIntro}
+
+    \inferrule
+      {
+        \varphi \vee \psi
+        \\\\
+        \varphi \rightarrow \chi
+        \\
+        \psi \rightarrow \chi
+      } 
+      {
+        \chi
+      } 
+    \textsc{\ \ DisjElim}
+  \end{mathpar}
+
 \end{frame}
+
 
 
 \begin{frame}
   \frametitle{Universal and Existential}
+
+  \begin{mathpar}
+    \inferrule
+      {
+        \text{fresh}\ y
+        \\
+        P(y)
+      } 
+      {
+        \forall x . P(x)
+      } 
+    \textsc{\ \ UnivIntro}
+
+    \inferrule
+      {
+        \forall x . P(x)
+      } 
+      { 
+        P(t) 
+      } 
+    \textsc{\ \ UnivElim}
+  \end{mathpar}
+
+  \begin{mathpar}
+    \inferrule
+      {
+        P(t)
+      } 
+      {
+        \exists x . P(x)
+      } 
+    \textsc{\ \ ExistIntro}
+
+    \inferrule
+      {
+        \exists x . P(x)
+        \\
+        \text{fresh}\ y
+      } 
+      { 
+        P(y) 
+      } 
+    \textsc{\ \ ExisElim}
+  \end{mathpar}
+
 \end{frame}
 
