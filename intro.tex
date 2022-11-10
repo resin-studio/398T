@@ -1,116 +1,137 @@
 \begin{frame}
-  \frametitle{Implication and Negation}
+  \frametitle{Implication and Negation: Rules}
+  
+  \begin{itemize}
+    \item Implication: \(P \rightarrow Q\), i.e. "if P then Q"
+  \end{itemize}
   \begin{mathpar}
-
+    \\
     \inferrule
       {
-        \varphi
+        P
         \\\\
         \vdots
         \\\\
-        \psi
+        Q
       } 
       {
-        \varphi \rightarrow \psi
+        P \rightarrow Q
       } 
     \textsc{\ \ ImpIntro}
 
     \inferrule
       {
-        \varphi \rightarrow \psi
+        P \rightarrow Q
         \\
-        \varphi
+        P
       } 
       {
-        \psi
+        Q
       } 
     \textsc{\ \ ImpElim}
+    \\
+  \end{mathpar}
 
-    \\\\
-
+  \begin{itemize}
+    \item Negation: \(\neg P\), i.e. "not P"
+  \end{itemize}
+  \begin{mathpar}
+    \\
     \inferrule
       {
-        \varphi \rightarrow \psi
+        P \rightarrow Q
         \\
-        \varphi \rightarrow \neg \psi
+        P \rightarrow \neg Q
       } 
       {
-        \neg \varphi
+        \neg P
       } 
     \textsc{\ \ NegIntro}
 
     \inferrule
       {
-        \neg \varphi
+        \neg P
       } 
       {
-        \varphi \rightarrow \psi
+        P \rightarrow Q
       } 
     \textsc{\ \ NegElim}
+    \\
 \end{mathpar}
 \end{frame}
 
+
 \begin{frame}
   \frametitle{Conjunction and Disjunction}
-  \begin{mathpar}
 
+  \begin{itemize}
+    \item Conjunction: \(P \wedge Q\), i.e. "P and Q"
+  \end{itemize}
+  \begin{mathpar}
+    \\
     \inferrule
       {
-        \varphi \\ \psi
+        P \\ Q
       } 
       {
-        \varphi \wedge \psi
+        P \wedge Q
       } 
     \textsc{\ \ ConjIntro}
 
     \inferrule
       {
-        \varphi \wedge \psi
+        P \wedge Q
       } 
       {
-        \varphi
+        P
       } 
 
     \inferrule
       {
-        \varphi \wedge \psi
+        P \wedge Q
       } 
       {
-        \psi
+        Q
       } 
     \textsc{\ \ ConjElim}
+    \\
+  \end{mathpar}
 
-    \\\\ 
+  \begin{itemize}
+    \item Disjunction: \(P \vee Q\), i.e. "P or Q"
+  \end{itemize}
+  \begin{mathpar}
+    \\
+    \inferrule
+      {
+        P 
+      } 
+      {
+        P \vee Q
+      } 
 
     \inferrule
       {
-        \varphi 
+        Q 
       } 
       {
-        \varphi \vee \psi
-      } 
-
-    \inferrule
-      {
-        \psi 
-      } 
-      {
-        \varphi \vee \psi
+        P \vee Q
       } 
     \textsc{\ \ DisjIntro}
 
     \inferrule
       {
-        \varphi \vee \psi
+        P \vee Q
         \\\\
-        \varphi \rightarrow \chi
+        P \rightarrow R 
         \\
-        \psi \rightarrow \chi
+        Q \rightarrow R 
       } 
       {
-        \chi
+        R 
       } 
     \textsc{\ \ DisjElim}
+    \\
   \end{mathpar}
 
 \end{frame}
@@ -120,7 +141,11 @@
 \begin{frame}
   \frametitle{Universal and Existential}
 
+  \begin{itemize}
+    \item Universal: \(\forall x . P(x)\), i.e. "for all x, P(x)"
+  \end{itemize}
   \begin{mathpar}
+    \\
     \inferrule
       {
         \text{fresh}\ y
@@ -140,9 +165,14 @@
         P(t) 
       } 
     \textsc{\ \ UnivElim}
+    \\
   \end{mathpar}
 
+  \begin{itemize}
+    \item Existential: \(\exists x . P(x)\), i.e. "there's an x, such that P(x)"
+  \end{itemize}
   \begin{mathpar}
+    \\
     \inferrule
       {
         P(t)
@@ -150,7 +180,7 @@
       {
         \exists x . P(x)
       } 
-    \textsc{\ \ ExistIntro}
+    \textsc{\ \ ExisIntro}
 
     \inferrule
       {
@@ -162,7 +192,23 @@
         P(y) 
       } 
     \textsc{\ \ ExisElim}
+    \\
   \end{mathpar}
 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exercises}
+
+  Match each phrase with one or more inference rules
+  \begin{enumerate}
+    \item Life is beautiful, so either life is beautiful or pigs fly    
+    \item Obviously pigs don't fly, so if pigs fly then I'll pay you one bitcoin     
+    \item given that the earth is flat, we can deduce that we can fall off the planet, so if the earth is flat then we can fall off the planet.
+    \item Austin is a city in Texas, so there's a city in Texas
+    \item All texans like BBQ and some texans are vegan, so even vegans like BBQ 
+    \item There's a dog in the yard, let's call it Fido; so Fido is in the yard. 
+
+  \end{enumerate}
 \end{frame}
 
