@@ -1,4 +1,60 @@
 \begin{frame}
+  \frametitle{Basic inference: introduction}
+  
+  
+  \begin{itemize}
+    \item An inference rule is a logical step of reasoning
+    \item An inference rule says "from P, we can deduce Q" 
+    \item Some common notations 
+    \begin{mathpar}
+      P \vdash Q
+
+      \inferrule{P}{Q} 
+
+      P \Longrightarrow Q
+    \end{mathpar}
+
+    \item from \(9 + x^2 = 25\), we can deduce \(b = 4\)
+    \begin{mathpar}
+      9 + x^2 = 25 \vdash |x| = 4
+
+      \inferrule 
+        {9 + x^2 = 25} 
+        {|x| = 4}
+
+      9 + x^2 = 25 \Longrightarrow |x| = 4
+    \end{mathpar}
+  \end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Basic inference: proof}
+  
+  
+  \begin{itemize}
+    \item A proof is a combination of inference rules  
+    \item A proof of \(P \vdash Q\), i.e. "Q under the assumption of P": 
+    \begin{mathpar}
+      \inferrule
+        {
+          \inferrule
+            { }
+            {R_1}
+          \\
+          \inferrule
+            {P}
+            {R_2}
+        }
+        {Q} 
+    \end{mathpar}
+  \end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
   \frametitle{Basic inference: implication and negation}
   
   \begin{itemize}
