@@ -1,0 +1,42 @@
+\begin{frame}
+    \frametitle{Another helpful method: contrapositive}
+
+    \begin{itemize}
+        \item Our very basic simple problem asks us to prove $P \longrightarrow Q$
+        \item However, sometimes a straightforward direct proof can be really annoying
+        \item Proving the \textbf{contrapositive} might be easier
+    \end{itemize}
+    
+    \begin{mathpar}
+        $\neg Q \longrightarrow \neg P$
+    \end{mathpar}
+    
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Make some contrapositive statements!}
+    
+    What is the contrapositive of these claims?
+    \begin{itemize}
+        \item If today is Tuesday, then we have class today.
+        \item If it's a cat, then it does not bark.
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{An actual example}
+    
+    \begin{prop}
+    If r is an irrational number, then \sqrt{r} is also an irrational number.
+  \end{prop}
+  \begin{proof}
+    Prove the contrapositive: if $\sqrt{r}$ is not an irrational number, then r is not an irrational number.\\
+    We assume that $\sqrt{r}$ is a rational number. Then, there exists some integer m and n such that \sqrt{r} = \frac{m}{n}.\\
+    Square both sides to get $\sqrt{r}^2 = \frac{m^2}{n^2}$. We know that a square of integer is an integer, so $m^2$ and $n^2$ are both integers. We get that $r = \frac{m^2}{n^2}$, which means that r is a rational number and not an irrational number.
+  \end{proof}
+  \qquad\\
+  \refl How might you prove this directly? Is it easier or harder to prove this directly or with contrapositive?
+
+\end{frame}
