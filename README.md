@@ -11,3 +11,6 @@
 
 ## Signal group
 https://signal.group/#CjQKIOogkc6z7ULr-fkSscE8xi1nQAi9T9qmMRykTWl4sn3rEhAh0m62CMnYtKCor8BjvPUe
+
+## Influences
+https://www.cs.utexas.edu/~isil/cs311h/lecture-proofs-6up.pdf
