@@ -6,7 +6,7 @@
     \item The hypothesis is decomposed into distinct cases and
     \item The conclusion is demonstrated separately in each case
     \end{enumerate}
-    \qquad\\\qquad\\
+    \qquad\\
   \item Valid case decompositions are \textit{exhaustive}: they
     articulate all and only the possibilities admitted by the original
     hypothesis
@@ -14,7 +14,7 @@
     \item Very valid: $x\in\mathbb{N}\rightarrow x\text{ is even}\lor x\text{ is odd}$
     \item Very invalid: $x\in\mathbb{N}\rightarrow x=0\lor x=1\lor x=3$
     \end{itemize}
-    \qquad\\\qquad\\
+    \qquad\\    
   \item Sometimes called ``proof by exhaustion''
   \end{itemize}
 \end{frame}
@@ -38,34 +38,34 @@
   resorting to cases
 \end{frame}
 
-\begin{frame}
-  \frametitle{Proof by cases: Inference rules}
-  \begin{mathpar}
-    \inferrule
-        {
-          (\phi_1\lor\cdots\lor\phi_n)\rightarrow \psi
-        }
-        {
-          \phi_1\rightarrow \psi\\
-          \cdots\\
-          \phi_n\rightarrow \psi
-        }
-        \textsc{\ \ CaseIntro}
+%% \begin{frame}
+%%   \frametitle{Proof by cases: Inference rules}
+%%   \begin{mathpar}
+%%     \inferrule
+%%         {
+%%           (\phi_1\lor\cdots\lor\phi_n)\rightarrow \psi
+%%         }
+%%         {
+%%           \phi_1\rightarrow \psi\\
+%%           \cdots\\
+%%           \phi_n\rightarrow \psi
+%%         }
+%%         \textsc{\ \ CaseIntro}
 
-        \inferrule
-            {
-              \phi_1\rightarrow \psi\\
-              \cdots\\
-              \phi_n\rightarrow \psi
-            }
-            {
-              (\phi_1\lor\cdots\lor\phi_n) \rightarrow \psi
-            }
-            \textsc{\ \ CaseElim}
-  \end{mathpar}
-  In short, $((\phi_1\lor\cdots\lor\phi_n) \rightarrow
-  \psi)\equiv((\phi_1\rightarrow\psi)\land\cdots\land(\phi_n\rightarrow\psi))$.
-\end{frame}
+%%         \inferrule
+%%             {
+%%               \phi_1\rightarrow \psi\\
+%%               \cdots\\
+%%               \phi_n\rightarrow \psi
+%%             }
+%%             {
+%%               (\phi_1\lor\cdots\lor\phi_n) \rightarrow \psi
+%%             }
+%%             \textsc{\ \ CaseElim}
+%%   \end{mathpar}
+%%   In short, $((\phi_1\lor\cdots\lor\phi_n) \rightarrow
+%%   \psi)\equiv((\phi_1\rightarrow\psi)\land\cdots\land(\phi_n\rightarrow\psi))$.
+%% \end{frame}
 
 \begin{frame}
   \frametitle{Proof by cases}
@@ -75,7 +75,7 @@
     \item Conceptually simple
     \item Well-chosen cases can make proofs easier to write
     \end{itemize}
-    \qquad\\\qquad\\
+    \qquad\\
   \item Cons
     \begin{itemize}
     \item Too many cases are fun for no one (especially readers)
